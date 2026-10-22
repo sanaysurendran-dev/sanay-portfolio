@@ -1,0 +1,230 @@
+/* ── Education Section ──────────────────────────────────── */
+.education {
+  position: relative;
+  z-index: 1;
+  background: linear-gradient(180deg, transparent 0%, rgba(10, 10, 31, 0.4) 50%, transparent 100%);
+}
+
+.education__content {
+  display: grid;
+  grid-template-columns: 1.4fr 0.6fr;
+  gap: 2rem;
+  margin-top: 3rem;
+  position: relative;
+}
+
+.education__timeline-line {
+  display: none; /* shown at wider breakpoints if desired */
+}
+
+/* Main Card */
+.education__card {
+  position: relative;
+  padding: 2rem;
+}
+
+.education__card:hover {
+  border-color: rgba(139, 92, 246, 0.4);
+  box-shadow: 0 12px 50px rgba(139, 92, 246, 0.15);
+}
+
+.education__timeline-dot {
+  position: absolute;
+  left: -14px;
+  top: 2.5rem;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background: var(--gradient-primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 0.8rem;
+  box-shadow: 0 0 15px rgba(139, 92, 246, 0.5);
+}
+
+.education__card-inner {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+/* Header */
+.education__header {
+  display: flex;
+  align-items: flex-start;
+  gap: 1.25rem;
+}
+
+.education__icon-wrap {
+  width: 52px;
+  height: 52px;
+  border-radius: 12px;
+  background: rgba(139, 92, 246, 0.15);
+  border: 1px solid rgba(139, 92, 246, 0.25);
+  color: var(--purple-400);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.education__degree-tag {
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  color: var(--cyan-400);
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  display: block;
+  margin-bottom: 0.4rem;
+}
+
+.education__degree {
+  font-size: 1.3rem;
+  font-weight: 800;
+  color: var(--text-primary);
+  line-height: 1.25;
+  margin-bottom: 0.35rem;
+}
+
+.education__institute {
+  font-size: 0.92rem;
+  font-weight: 600;
+  background: var(--gradient-text);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Meta */
+.education__meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.education__meta-item {
+  display: flex;
+  align-items: center;
+  gap: 0.45rem;
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+}
+
+.education__meta-item--highlight {
+  color: var(--text-primary);
+  font-weight: 600;
+  background: rgba(139, 92, 246, 0.1);
+  border: 1px solid rgba(139, 92, 246, 0.2);
+  padding: 0.25rem 0.75rem;
+  border-radius: 999px;
+}
+
+.education__meta-item--highlight strong {
+  color: var(--purple-400);
+}
+
+/* Coursework */
+.education__coursework-header {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--text-secondary);
+  margin-bottom: 0.85rem;
+}
+
+.education__coursework-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+/* Status Card */
+.education__status {
+  padding: 1.75rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  align-self: start;
+}
+
+.education__status:hover {
+  border-color: rgba(6, 182, 212, 0.4);
+  box-shadow: 0 8px 30px rgba(6, 182, 212, 0.1);
+}
+
+.education__status-header {
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+  font-size: 0.88rem;
+  font-weight: 700;
+  color: #4ade80;
+}
+
+.education__status-dot {
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  background: #4ade80;
+  box-shadow: 0 0 10px #4ade80;
+  animation: pulse-glow 2s ease-in-out infinite;
+}
+
+.education__status-desc {
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+  line-height: 1.7;
+}
+
+/* Progress */
+.education__progress {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.education__progress-header {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.78rem;
+  color: var(--text-secondary);
+  font-family: var(--font-mono);
+}
+
+.education__progress-bar {
+  height: 6px;
+  background: rgba(255, 255, 255, 0.06);
+  border-radius: 999px;
+  overflow: hidden;
+}
+
+.education__progress-fill {
+  height: 100%;
+  background: var(--gradient-primary);
+  border-radius: 999px;
+  box-shadow: 0 0 10px rgba(139, 92, 246, 0.5);
+}
+
+.education__progress-years {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.68rem;
+  color: var(--text-muted);
+  font-family: var(--font-mono);
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .education__content { grid-template-columns: 1fr; }
+  .education__timeline-dot { display: none; }
+}
+
+@media (max-width: 480px) {
+  .education__card { padding: 1.5rem; }
+  .education__header { flex-direction: column; gap: 0.75rem; }
+  .education__meta { flex-direction: column; gap: 0.5rem; }
+}
